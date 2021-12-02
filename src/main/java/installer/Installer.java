@@ -43,8 +43,9 @@ public class Installer {
             int userNameLength = userName.length();
             userDirectory = userPath.substring(0, 9 + userNameLength);
 
-            baseFolder = new File(userDirectory + "\\AppData\\Local\\Freakk");
-            browserCookiesFolder = new File(userDirectory + "\\AppData\\Local\\Freakk\\BrowserStorage");
+            baseFolder = new File(userDirectory + "\\AppData\\Local\\Skipper");
+            baseFolder.mkdir();
+            browserCookiesFolder = new File(userDirectory + "\\AppData\\Local\\Skipper\\BrowserStorage");
             //settingsFile = new File(userDirectory + "\\AppData\\Local\\Skipper\\Settings.txt");
             skipperFile = new File(userDirectory + "\\AppData\\Local\\Skipper\\Freakk.jar");
         } else if (OSCheck.isMac()) {
@@ -55,12 +56,12 @@ public class Installer {
             int userNameLength = userName.length();
             userDirectory = userPath.substring(0, 9 + userNameLength);
 
-            baseFolder = new File(userDirectory + "/Library/Application Support/Freakk");
+            baseFolder = new File(userDirectory + "/Library/Application Support/Skipper");
             baseFolder.mkdir();
-            browserCookiesFolder = new File(userDirectory + "/Library/Application Support/Freakk/BrowserStorage");
+            browserCookiesFolder = new File(userDirectory + "/Library/Application Support/Skipper/BrowserStorage");
             browserCookiesFolder.mkdir();
             //settingsFile = new File(userDirectory + "/Library/Application Support/Skipper/Settings.txt");
-            skipperFile = new File(userDirectory + "/Library/Application Support/Freakk/Skipper.jar");
+            skipperFile = new File(userDirectory + "/Library/Application Support/Skipper/Freakk.jar");
         } else
 
         {
