@@ -21,7 +21,7 @@ public class Installer {
     public static void main(String[] args) throws IOException {
         startUp();
         if (!skipperFile.exists()) {
-            URL website = new URL("https://github.com/GigiaJ/Freakk/releases/download/1.0.1/Freakk.jar");
+            URL website = new URL("https://github.com/GigiaJ/Freakk/releases/download/1.0.2/Freakk.jar");
             ReadableByteChannel rbc = Channels.newChannel(website.openStream());
             FileOutputStream fos = new FileOutputStream(skipperFile.getAbsolutePath());
             FileChannel.open(Paths.get("Freakk.jar"), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING,
